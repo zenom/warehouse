@@ -1,0 +1,37 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: http://rimage:55555/RmSystemService.svc
+    body: |-
+      <?xml version='1.0' ?>
+      <env:Envelope xmlns:rim="http://schemas.datacontract.org/2004/07/Rimage.Web.Service" xmlns:rms="http://www.rimage.com/RmSystemService" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+        <env:Header />
+        <env:Body>
+          <rms:GetSystems>
+            <rms:request>
+              <rim:CallerId>123123123</rim:CallerId>
+            </rms:request>
+          </rms:GetSystems>
+        </env:Body>
+      </env:Envelope>
+    headers: 
+      "soapaction: http://www.rimage.com/rmsystemservice/irmsystemservice/getsystems": 
+      - ""
+      "content-type: text/xml;charset=utf-8": 
+      - ""
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - text/xml; charset=utf-8
+      server: 
+      - Microsoft-HTTPAPI/1.0
+      date: 
+      - Tue, 19 Oct 2010 02:54:41 GMT
+      content-length: 
+      - "1442"
+    body: "<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\"><s:Body><GetSystemsResponse xmlns=\"http://www.rimage.com/RmSystemService\"><GetSystemsResult xmlns:a=\"http://schemas.datacontract.org/2004/07/Rimage.Web.Service\" xmlns:i=\"http://www.w3.org/2001/XMLSchema-instance\"><a:ErrorCode>0</a:ErrorCode><a:ErrorMessage i:nil=\"true\"/><a:Systems><a:HostSystem><a:Autoloader><a:Bins><a:Bin><a:Media>Dvdr</a:Media></a:Bin><a:Bin><a:Media>DvdrDl</a:Media></a:Bin></a:Bins><a:Model>Rimage 3400</a:Model><a:Printer><a:Model>Everest 400</a:Model><a:SerialNumber>Printer - USB001, HID-0: EVEREST CDPR24 V0.13 SN-023A1200</a:SerialNumber></a:Printer><a:Recorders><a:Recorder><a:Capability>Bd</a:Capability></a:Recorder><a:Recorder><a:Capability>Bd</a:Capability></a:Recorder></a:Recorders><a:SerialNumber>  Autoloader 1: RIMAGE 3400 5.005A SN-5001396</a:SerialNumber></a:Autoloader><a:ConnId>Rimage_RmWebService:localhost:4664</a:ConnId><a:HasImagingServer>true</a:HasImagingServer><a:HasProductionServer>true</a:HasProductionServer><a:Hostname>RIMAGE</a:Hostname><a:ImagingServer><a:ConnId i:nil=\"true\"/><a:ServerId>RIMAGE_IS01</a:ServerId><a:State>Active</a:State><a:Type>Imaging</a:Type></a:ImagingServer><a:ProductionServer><a:ConnId i:nil=\"true\"/><a:ServerId>RIMAGE_PS01</a:ServerId><a:State>Active</a:State><a:Type>Production</a:Type></a:ProductionServer></a:HostSystem></a:Systems></GetSystemsResult></GetSystemsResponse></s:Body></s:Envelope>"
+    http_version: "1.1"

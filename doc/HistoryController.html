@@ -1,0 +1,746 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: HistoryController</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (H)</a> &raquo; 
+    
+    
+    <span class="title">HistoryController</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: HistoryController
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActionController::Base</li>
+          
+            <li class="next"><span class='object_link'><a href="ApplicationController.html" title="ApplicationController (class)">ApplicationController</a></span></li>
+          
+            <li class="next">HistoryController</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/controllers/history_controller.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+  
+  
+  
+  
+  
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#archive-instance_method" title="#archive (instance method)">- (Object) <strong>archive</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cancel_processing-instance_method" title="#cancel_processing (instance method)">- (Object) <strong>cancel_processing</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_failed-instance_method" title="#clear_failed (instance method)">- (Object) <strong>clear_failed</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#destroy-instance_method" title="#destroy (instance method)">- (Object) <strong>destroy</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#index-instance_method" title="#index (instance method)">- (Object) <strong>index</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_archived-instance_method" title="#load_archived (instance method)">- (Object) <strong>load_archived</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_cancelled-instance_method" title="#load_cancelled (instance method)">- (Object) <strong>load_cancelled</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_completed-instance_method" title="#load_completed (instance method)">- (Object) <strong>load_completed</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_failures-instance_method" title="#load_failures (instance method)">- (Object) <strong>load_failures</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_pending-instance_method" title="#load_pending (instance method)">- (Object) <strong>load_pending</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_processing-instance_method" title="#load_processing (instance method)">- (Object) <strong>load_processing</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#re_process_video-instance_method" title="#re_process_video (instance method)">- (Object) <strong>re_process_video</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="archive-instance_method">
+  
+    - (<tt>Object</tt>) <strong>archive</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9
+10
+11</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/history_controller.rb', line 9</span>
+
+<span class='def def kw'>def</span> <span class='archive identifier id'>archive</span>
+  <span class='@content ivar id'>@content</span><span class='dot token'>.</span><span class='archive! fid id'>archive!</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="cancel_processing-instance_method">
+  
+    - (<tt>Object</tt>) <strong>cancel_processing</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/history_controller.rb', line 22</span>
+
+<span class='def def kw'>def</span> <span class='cancel_processing identifier id'>cancel_processing</span>
+  <span class='@content ivar id'>@content</span><span class='dot token'>.</span><span class='burns identifier id'>burns</span><span class='dot token'>.</span><span class='delete_all identifier id'>delete_all</span> <span class='if if_mod kw'>if</span> <span class='@content ivar id'>@content</span><span class='dot token'>.</span><span class='burns identifier id'>burns</span><span class='dot token'>.</span><span class='count identifier id'>count</span> <span class='gt op'>&gt;</span> <span class='integer val'>0</span>
+  <span class='@content ivar id'>@content</span><span class='dot token'>.</span><span class='cancel! fid id'>cancel!</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="clear_failed-instance_method">
+  
+    - (<tt>Object</tt>) <strong>clear_failed</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/history_controller.rb', line 27</span>
+
+<span class='def def kw'>def</span> <span class='clear_failed identifier id'>clear_failed</span>
+  <span class='@content ivar id'>@content</span><span class='dot token'>.</span><span class='queue_up! fid id'>queue_up!</span>
+  <span class='@old_burns ivar id'>@old_burns</span> <span class='assign token'>=</span> <span class='@content ivar id'>@content</span><span class='dot token'>.</span><span class='burns identifier id'>burns</span><span class='dot token'>.</span><span class='find_all_by_state identifier id'>find_all_by_state</span><span class='lparen token'>(</span><span class='symbol val'>:failed</span><span class='rparen token'>)</span>
+  <span class='Burn constant id'>Burn</span><span class='dot token'>.</span><span class='destroy identifier id'>destroy</span><span class='lparen token'>(</span><span class='@old_burns ivar id'>@old_burns</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="destroy-instance_method">
+  
+    - (<tt>Object</tt>) <strong>destroy</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15
+16</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/history_controller.rb', line 13</span>
+
+<span class='def def kw'>def</span> <span class='destroy identifier id'>destroy</span>
+  <span class='@content ivar id'>@content</span> <span class='assign token'>=</span> <span class='Content constant id'>Content</span><span class='dot token'>.</span><span class='find identifier id'>find</span><span class='lparen token'>(</span><span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:id</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  <span class='@content ivar id'>@content</span><span class='dot token'>.</span><span class='destroy identifier id'>destroy</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="index-instance_method">
+  
+    - (<tt>Object</tt>) <strong>index</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+6
+7</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/history_controller.rb', line 6</span>
+
+<span class='def def kw'>def</span> <span class='index identifier id'>index</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="load_archived-instance_method">
+  
+    - (<tt>Object</tt>) <strong>load_archived</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+53
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/history_controller.rb', line 53</span>
+
+<span class='def def kw'>def</span> <span class='load_archived identifier id'>load_archived</span>
+  <span class='@archived ivar id'>@archived</span> <span class='assign token'>=</span> <span class='Content constant id'>Content</span><span class='dot token'>.</span><span class='archived identifier id'>archived</span><span class='dot token'>.</span><span class='paginate identifier id'>paginate</span> <span class='symbol val'>:page</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:page</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='symbol val'>:per_page</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>10</span>
+  <span class='render identifier id'>render</span> <span class='symbol val'>:partial</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;history/archived&quot;</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="load_cancelled-instance_method">
+  
+    - (<tt>Object</tt>) <strong>load_cancelled</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+58
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/history_controller.rb', line 58</span>
+
+<span class='def def kw'>def</span> <span class='load_cancelled identifier id'>load_cancelled</span>
+  <span class='@cancels ivar id'>@cancels</span> <span class='assign token'>=</span> <span class='Content constant id'>Content</span><span class='dot token'>.</span><span class='cancelled identifier id'>cancelled</span>
+  <span class='render identifier id'>render</span> <span class='symbol val'>:partial</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;history/cancelled&quot;</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="load_completed-instance_method">
+  
+    - (<tt>Object</tt>) <strong>load_completed</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+33
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/history_controller.rb', line 33</span>
+
+<span class='def def kw'>def</span> <span class='load_completed identifier id'>load_completed</span>
+  <span class='@completed ivar id'>@completed</span> <span class='assign token'>=</span> <span class='Content constant id'>Content</span><span class='dot token'>.</span><span class='completed identifier id'>completed</span><span class='dot token'>.</span><span class='paginate identifier id'>paginate</span> <span class='symbol val'>:page</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='params identifier id'>params</span><span class='lbrack token'>[</span><span class='symbol val'>:page</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='symbol val'>:per_page</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='integer val'>10</span>
+  <span class='render identifier id'>render</span> <span class='symbol val'>:partial</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;history/completed&quot;</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="load_failures-instance_method">
+  
+    - (<tt>Object</tt>) <strong>load_failures</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45
+46</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/history_controller.rb', line 43</span>
+
+<span class='def def kw'>def</span> <span class='load_failures identifier id'>load_failures</span>
+  <span class='@failures ivar id'>@failures</span> <span class='assign token'>=</span> <span class='Content constant id'>Content</span><span class='dot token'>.</span><span class='failed identifier id'>failed</span>
+  <span class='render identifier id'>render</span> <span class='symbol val'>:partial</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;history/failures&quot;</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="load_pending-instance_method">
+  
+    - (<tt>Object</tt>) <strong>load_pending</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/history_controller.rb', line 48</span>
+
+<span class='def def kw'>def</span> <span class='load_pending identifier id'>load_pending</span>
+  <span class='@pending ivar id'>@pending</span> <span class='assign token'>=</span> <span class='Content constant id'>Content</span><span class='dot token'>.</span><span class='pending identifier id'>pending</span>
+  <span class='render identifier id'>render</span> <span class='symbol val'>:partial</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;history/pending&quot;</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="load_processing-instance_method">
+  
+    - (<tt>Object</tt>) <strong>load_processing</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+38
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/history_controller.rb', line 38</span>
+
+<span class='def def kw'>def</span> <span class='load_processing identifier id'>load_processing</span>
+  <span class='@processing ivar id'>@processing</span> <span class='assign token'>=</span> <span class='Content constant id'>Content</span><span class='dot token'>.</span><span class='processing identifier id'>processing</span>
+  <span class='render identifier id'>render</span> <span class='symbol val'>:partial</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='string val'>&quot;history/processing&quot;</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="re_process_video-instance_method">
+  
+    - (<tt>Object</tt>) <strong>re_process_video</strong> 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controllers/history_controller.rb', line 18</span>
+
+<span class='def def kw'>def</span> <span class='re_process_video identifier id'>re_process_video</span>
+  <span class='@content ivar id'>@content</span><span class='dot token'>.</span><span class='process_video identifier id'>process_video</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Tue Oct 19 23:20:10 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.1 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

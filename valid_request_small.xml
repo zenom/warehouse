@@ -1,0 +1,62 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rmj="http://www.rimage.com/RmJobService" xmlns:rim="http://schemas.datacontract.org/2004/07/Rimage.Web.Service" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <rmj:SubmitJob>
+         <rmj:request>
+            <rim:CallerId>warehouse</rim:CallerId>
+            <rim:Job>
+               <!--Optional:-->
+               <rim:ImagingOptions>       
+                  <rim:AllowOverwrite>true</rim:AllowOverwrite>
+                  <rim:AllowSpanning>true</rim:AllowSpanning>
+                  <rim:ImageFile>
+                     <rim:ImageFilePath>\\192.168.222.50\images\Video_Cayden_Richard_20100805114425</rim:ImageFilePath>
+                     <rim:SizeInMinutes>BdDl</rim:SizeInMinutes>
+                  </rim:ImageFile>
+                  <rim:ParentFolders>
+                     <rim:ParentFolder>
+                        <rim:ParentFolderPath>\\192.168.222.50\MAIN-CONTENT-BACKUP\Video\Video_Cayden_Richard_20100805114425</rim:ParentFolderPath>
+                     </rim:ParentFolder>
+                  </rim:ParentFolders>
+                  <rim:UdfOptions>
+                     <rim:Version>Ver150</rim:Version>
+                  </rim:UdfOptions>
+                  <rim:VolumeName>Video_Cayden_Richard</rim:VolumeName>
+               </rim:ImagingOptions>
+               <rim:JobId>montis insuper3</rim:JobId>
+               <rim:Priority>Normal</rim:Priority>
+               <rim:ProductionOptions>
+                  <rim:Copies>1</rim:Copies>
+                  <rim:FixateType>Sao</rim:FixateType>
+                  <rim:LabelFile>
+                     <rim:LabelFilePath>\\rimage\Rimage\Labels\belatorbackup.btw</rim:LabelFilePath>
+                     <rim:LabelType>Btw</rim:LabelType>
+                  </rim:LabelFile>
+                  <rim:MediaType>BdDl</rim:MediaType>
+                  <rim:Merge>
+                     <rim:MergeData>
+                        <rim:FieldNames>
+                           <!--Zero or more repetitions:-->
+                           <!--type: string-->
+                           <arr:string>iras ni</arr:string>
+                        </rim:FieldNames>
+                        <!--Optional:-->
+                        <rim:FieldValues>
+                           <!--Zero or more repetitions:-->
+                           <arr:ArrayOfstring>
+                              <!--Zero or more repetitions:-->
+                              <!--type: string-->
+                              <arr:string>nubibus ignem</arr:string>
+                           </arr:ArrayOfstring>
+                        </rim:FieldValues>
+                     </rim:MergeData>
+                  </rim:Merge>
+               </rim:ProductionOptions>
+               <!--Optional:-->
+               <!--type: JobType - enumeration: [Hybrid,ImageAndRecord,Iso,Udf,Hfs,BlueBook,ProductionOnly,LabelOnly,Audio,BlueBookFromImage,FromImage,ImageOnly,IsoImageOnly,UdfImageOnly,HfsImageOnly,HybridImageOnly]-->
+               <rim:Type>ImageAndRecord</rim:Type>
+            </rim:Job>
+         </rmj:request>
+      </rmj:SubmitJob>
+   </soapenv:Body>
+</soapenv:Envelope>

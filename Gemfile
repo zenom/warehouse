@@ -1,0 +1,48 @@
+source 'http://rubygems.org'
+
+gem 'rails', '3.0.1'
+gem 'mysql2'
+gem 'haml'
+gem 'haml-rails'
+gem 'jquery-rails'
+gem 'simple_form'
+gem 'will_paginate', '~> 3.0.pre2'
+gem "transitions", :require => ["transitions", "active_record/transitions"]
+gem 'inploy', :git => 'git://github.com/dcrec1/inploy.git'
+gem 'chronic'
+gem 'devise'
+gem 'cancan'
+gem 'nokogiri'
+gem 'handsoap'
+gem 'curb'
+gem 'yard'
+gem 'whenever'
+gem 'delayed_job', '2.1.0.pre2'
+gem 'pg'
+gem 'scoped_search'
+
+group :development, :test do 
+  gem 'rails-erd'
+  gem 'rails_best_practices'
+  gem 'awesome_print', :require => 'ap'
+  gem 'fabrication'
+  gem 'ffaker'
+  gem 'guard-rspec'
+  gem 'guard-livereload'
+  gem 'hirb'
+  gem 'wirble'
+  gem 'interactive_editor'
+end 
+
+group :test do
+  gem 'vcr'
+  gem 'webmock'
+  gem 'rspec'
+  gem 'steak', :git => 'git://github.com/cavalle/steak.git'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'remarkable', '>=4.0.0.alpha4'
+  gem 'remarkable_activerecord', '>=4.0.0.alpha4'
+  gem 'database_cleaner', :git => 'git://github.com/bmabey/database_cleaner.git'
+  gem 'launchy'
+end

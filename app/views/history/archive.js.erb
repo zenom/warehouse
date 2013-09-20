@@ -1,0 +1,6 @@
+$("#completed").load("<%=escape_javascript(completed_url)%>");
+$("#archived").load("<%=escape_javascript(archived_url)%>");
+$("#content_<%=@content.id%>").fadeTo(400, 0, function() {
+  $(this).remove();
+  $('.block table tr:odd').css('background-color', '#fbfbfb');
+});

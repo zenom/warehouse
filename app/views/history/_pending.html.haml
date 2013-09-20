@@ -1,0 +1,25 @@
+%div#pending
+  .block
+    .block_head
+      .bheadl
+      .bheadr
+      %h2{:style => "color: #a2cffd;"} Pending Queue
+      %span.ajax-loading
+
+    / .block_head ends
+    .block_content
+      %form{:action => "", :method => "post"}
+        %table{:cellpadding => "0", :cellspacing => "0", :width => "100%", :id => "users"}
+          %tr
+            %th Folder
+            %th Title
+            %th Content
+            %th Media
+            %th Burns
+            %td &nbsp;
+          - @pending.each do |content|
+            = render :partial => 'history/row', :locals => {:content => content }
+    
+    / .block_content ends
+    .bendl
+    .bendr

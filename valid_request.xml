@@ -1,0 +1,198 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:rmj="http://www.rimage.com/RmJobService" xmlns:rim="http://schemas.datacontract.org/2004/07/Rimage.Web.Service" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <rmj:SubmitJob>
+         <!--Optional:-->
+         <rmj:request>
+            <!--Optional:-->
+            <!--type: string-->
+            <rim:CallerId>warehouse</rim:CallerId>
+            <!--Optional:-->
+            <rim:Job>
+               <!--Optional:-->
+               <!--type: string-->
+               <rim:Email></rim:Email>
+               <!--Optional:-->
+               <rim:ImagingOptions>
+                  <!--Optional:-->
+                  <!--type: boolean-->
+                  <rim:AddFilesToZipArchive>false</rim:AddFilesToZipArchive>
+                  <!--Optional:-->
+                  <!--type: boolean-->
+                  <rim:AllowCaseSensitiveFileNames>false</rim:AllowCaseSensitiveFileNames>
+                  <!--Optional:-->
+                  <!--type: boolean-->
+                  <rim:AllowOverwrite>true</rim:AllowOverwrite>
+                  <!--Optional:-->
+                  <!--type: boolean-->
+                  <rim:AllowSpanning>true</rim:AllowSpanning>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <rim:CustomUserData></rim:CustomUserData>
+                  <!--Optional:-->
+                  <!--type: int-->
+                  <rim:CustomUserType>3</rim:CustomUserType>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <rim:HfsVolumeName>ferant rapidi</rim:HfsVolumeName>
+                  <!--Optional:-->
+                  <!--type: boolean-->
+                  <rim:IgnoreBadFileNames>false</rim:IgnoreBadFileNames>
+                  <!--Optional:-->
+                  <rim:ImageFile>
+                     <!--Optional:-->
+                     <!--type: boolean-->
+                     <rim:AddPostgap>false</rim:AddPostgap>
+                     <!--Optional:-->
+                     <!--type: string-->
+                     <rim:ImageFilePath>turbine corripuit scopuloque</rim:ImageFilePath>
+                     <!--Optional:-->
+                     <!--type: boolean-->
+                     <rim:IsCdxa>false</rim:IsCdxa>
+                     <!--Optional:-->
+                     <!--type: ImageFileSize - enumeration: [None,Cdr63,Cdr74,Cdr80,Dvdr,DvdrDl,Bd,BdDl]-->
+                     <rim:SizeInMinutes>BdDl</rim:SizeInMinutes>
+                     <!--Optional:-->
+                     <!--type: ImageFileType - enumeration: [Normal,Power,RimageHeader]-->
+                     <rim:Type>RimageHeader</rim:Type>
+                  </rim:ImageFile>
+                  <!--Optional:-->
+                  <!--Optional:-->
+                  <rim:ParentFolders>
+                     <!--Zero or more repetitions:-->
+                     <rim:ParentFolder>
+                        <!--Optional:-->
+                        <!--type: DestinationPartition - enumeration: [Both,Pc,Hfs]-->
+                        <rim:DestinationPartition>Hfs</rim:DestinationPartition>
+                        <!--Optional:-->
+                        <!--type: string-->
+                        <rim:OverrideTimestamp></rim:OverrideTimestamp>
+                        <!--Optional:-->
+                        <!--type: string-->
+                        <rim:ParentFolderPath>\\192.168.222.50\MAIN-CONTENT-BACKUP\Video\Video_Cayden_Richard_20100805114425</rim:ParentFolderPath>
+                     </rim:ParentFolder>
+                  </rim:ParentFolders>
+                  <!--Optional:-->
+                  <rim:UdfOptions>
+                     <!--Optional:-->
+                     <!--type: UdfApple - enumeration: [None,AppleExt]-->
+                     <rim:Apple>None</rim:Apple>
+                     <!--Optional:-->
+                     <!--type: UdfVersion - enumeration: [None,Ver102,Ver150,Ver200,Ver201,Ver250,Ver260]-->
+                     <rim:Version>Ver200</rim:Version>
+                  </rim:UdfOptions>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <rim:VolumeName>tenens mollitque animos</rim:VolumeName>
+                  <!--Optional:-->
+                  <!--type: int-->
+                  <rim:WaitForSpace>3</rim:WaitForSpace>
+               </rim:ImagingOptions>
+               <!--Optional:-->
+               <!--type: string-->
+               <rim:JobId>montis insuper</rim:JobId>
+               <!--Optional:-->
+               <!--type: JobPriority - enumeration: [High,Normal,Low]-->
+               <rim:Priority>Normal</rim:Priority>
+               <!--Optional:-->
+               <rim:ProductionOptions>
+                  <!--Optional:-->
+                  <!--type: int-->
+                  <rim:Copies>3</rim:Copies>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <rim:CustomUserData>iunonis adorat</rim:CustomUserData>
+                  <!--Optional:-->
+                  <!--type: int-->
+                  <rim:CustomUserType>3</rim:CustomUserType>
+
+                  <!--Optional:-->
+                  <!--type: boolean-->
+                  <rim:FixateFinalize>false</rim:FixateFinalize>
+                  <!--Optional:-->
+                  <!--type: FixateType - enumeration: [Tao,Sao,Raw,TaoSegmented,SaoSegmented,Skip]-->
+                  <rim:FixateType>Skip</rim:FixateType>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <rim:FixateUPCEAN>ferant rapidi secum</rim:FixateUPCEAN>
+                  <!--Optional:-->
+                  <rim:LabelFile>
+
+                     <!--Optional:-->
+                     <!--type: boolean-->
+                     <rim:BtwRenderLocalCopy>false</rim:BtwRenderLocalCopy>
+                     <!--Optional:-->
+                     <!--type: boolean-->
+                     <rim:BtwSaveAfterRendering>false</rim:BtwSaveAfterRendering>
+                     <!--Optional:-->
+                     <!--type: boolean-->
+                     <rim:DeleteLabelFileAfterPrinting>false</rim:DeleteLabelFileAfterPrinting>
+                     <!--Optional:-->
+                     <!--type: string-->
+                     <rim:LabelFilePath>\\rimage\Rimage\Labels\belatorbackup.btw</rim:LabelFilePath>
+                     <!--Optional:-->
+                     <!--type: LabelType - enumeration: [Auto,Btw,BtwOdbc,Pdf,Pcl]-->
+                     <rim:LabelType>Btw</rim:LabelType>
+                     <!--Optional:-->
+                     <!--type: float-->
+                     <rim:PerfectPrintAngle>1.5E2</rim:PerfectPrintAngle>
+                  </rim:LabelFile>
+                  <!--Optional:-->
+                  <!--type: MediaSize - enumeration: [Size120mm,Size80mm]-->
+                  <rim:MediaSize>Size120mm</rim:MediaSize>
+                  <!--Optional:-->
+                  <!--type: MediaType - enumeration: [Cdr,Dvdr,DvdrDl,Bd,BdDl]-->
+                  <rim:MediaType>Bd</rim:MediaType>
+                  <!--Optional:-->
+                  <rim:Merge>
+                     <!--Optional:-->
+                     <rim:MergeData>
+                        <!--Optional:-->
+                        <rim:FieldNames>
+                           <!--Zero or more repetitions:-->
+                           <!--type: string-->
+                           <arr:string>iras ni</arr:string>
+                        </rim:FieldNames>
+                        <!--Optional:-->
+                        <rim:FieldValues>
+                           <!--Zero or more repetitions:-->
+                           <arr:ArrayOfstring>
+                              <!--Zero or more repetitions:-->
+                              <!--type: string-->
+                              <arr:string>nubibus ignem</arr:string>
+                           </arr:ArrayOfstring>
+                        </rim:FieldValues>
+                     </rim:MergeData>
+                  </rim:Merge>
+                  <!--Optional:-->
+                  <!--type: boolean-->
+                  <rim:SimulatePrinting>true</rim:SimulatePrinting>
+                  <!--Optional:-->
+                  <!--type: boolean-->
+                  <rim:SimulateRecording>true</rim:SimulateRecording>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <rim:StreamerHost>atris hoc</rim:StreamerHost>
+                  <!--type: string-->
+                  <rim:TargetAutoloader>animos et temperat</rim:TargetAutoloader>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <rim:TargetCluster>sonoras imperio</rim:TargetCluster>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <rim:TargetInputBin>patriam loca</rim:TargetInputBin>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <rim:TargetMailslot>montis circum</rim:TargetMailslot>
+                  <!--Optional:-->
+                  <!--type: string-->
+                  <rim:TargetServer>laxas sciret dare</rim:TargetServer>
+               </rim:ProductionOptions>
+               <!--Optional:-->
+               <!--type: JobType - enumeration: [Hybrid,ImageAndRecord,Iso,Udf,Hfs,BlueBook,ProductionOnly,LabelOnly,Audio,BlueBookFromImage,FromImage,ImageOnly,IsoImageOnly,UdfImageOnly,HfsImageOnly,HybridImageOnly]-->
+               <rim:Type>ImageAndRecord</rim:Type>
+            </rim:Job>
+         </rmj:request>
+      </rmj:SubmitJob>
+   </soapenv:Body>
+</soapenv:Envelope>

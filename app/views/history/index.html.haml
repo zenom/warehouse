@@ -1,0 +1,13 @@
+:javascript
+    var refreshId = setInterval(function() {
+      $("#completed").load("/completed");
+      $("#failures").load("/failures");
+      $("#pending").load("/pending");
+      $("#process").load("/processing");
+    }, 60000);
+= render :partial => "history/processing", :locals => {:processing => @processing }
+= render :partial => "history/failures", :locals => {:failures => @failures }
+= render :partial => "history/pending", :locals => {:pending => @pending }
+= render :partial => "history/cancelled", :locals => {:cancels => @cancels}
+= render :partial => "history/completed", :locals => {:completed => @completed }
+= render :partial => "history/archived", :locals => {:archived => @archived}

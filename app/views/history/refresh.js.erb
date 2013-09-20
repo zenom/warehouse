@@ -1,0 +1,8 @@
+$(function() {
+  $.get("<%=escape_javascript(history_index_path)%>", function(data) {
+    $("#process").replaceWith($(data).find("#process").html());
+    $("#failures").replaceWith($(data).find("#failures").html());
+    $("#pending").replaceWith($(data).find("#pending").html());
+    $("#completed").replaceWith($(data).find("#completed").html());
+  });
+});

@@ -1,0 +1,9 @@
+%tr{:id => "folder_#{folder.id}"}
+  %td.folder= "#{Settings::BASE_FOLDER_PATH}#{folder.folder}"
+  %td.media= folder.media
+  %td.content= folder.content_type
+  %td.title= folder.title
+  %td.functions
+    = link_to "Edit", edit_folder_path(folder)
+    = " | "
+    = link_to "Delete", folder_path(folder), :method => :delete, :remote => true, :confirm => "Are you sure you want to delete this watch folder?"

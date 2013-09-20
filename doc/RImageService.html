@@ -1,0 +1,2388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: RImageService</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (R)</a> &raquo; 
+    
+    
+    <span class="title">RImageService</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: RImageService
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Handsoap::Service</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Handsoap::Service</li>
+          
+            <li class="next">RImageService</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/models/rimage_service.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+SOAP Class to interface with our RImage Burner &amp; Labeler.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div>
+
+  
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#blueray_imaging_options-instance_method" title="#blueray_imaging_options (instance method)">- (Object) <strong>blueray_imaging_options</strong>(node, path) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Build the imaging options for blueray.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#build_blueray-instance_method" title="#build_blueray (instance method)">- (Object) <strong>build_blueray</strong>(node, path, priority = &quot;Normal&quot;) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Build a blueray options for submitting to the RImage server.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#build_dvd-instance_method" title="#build_dvd (instance method)">- (Object) <strong>build_dvd</strong>(node, path, priority = &quot;Normal&quot;) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Build a dvd with dvd options for submitting to the RImage server.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#build_job-instance_method" title="#build_job (instance method)">- (Object) <strong>build_job</strong>(node, path, priority = &quot;Normal&quot;, type = &quot;BdDl&quot;) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Build the job parameters we neeed to the RImage server.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#build_label-instance_method" title="#build_label (instance method)">- (Object) <strong>build_label</strong>(node) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Build the label information for the request.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cancel_all_jobs-instance_method" title="#cancel_all_jobs (instance method)">- (Boolean, Hash) <strong>cancel_all_jobs</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Cancel all jobs, not accessible via the web.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#cancel_job-instance_method" title="#cancel_job (instance method)">- (Hash) <strong>cancel_job</strong>(job_id, caller = &quot;Warehouse&quot;) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Cancel an existing job on the RImage server.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#clear_finished_jobs-instance_method" title="#clear_finished_jobs (instance method)">- (Hash) <strong>clear_finished_jobs</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Clear all finished jobs on the server.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_job_id-instance_method" title="#create_job_id (instance method)">- (Object) <strong>create_job_id</strong>(path) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Create a job id based on the path, and the # of items we have in the db.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dvd_imaging_options-instance_method" title="#dvd_imaging_options (instance method)">- (Object) <strong>dvd_imaging_options</strong>(node, path) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Build the imaging options for dvd.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_all_jobs-instance_method" title="#get_all_jobs (instance method)">- (Hash) <strong>get_all_jobs</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Get a list of all the current jobs on the server.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#imaging_options-instance_method" title="#imaging_options (instance method)">- (Object) <strong>imaging_options</strong>(node, path, image_type) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Build the imaging options.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#job_status-instance_method" title="#job_status (instance method)">- (Hash) <strong>job_status</strong>(job_id) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Get the status of an existing job from the RImage burner.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#on_response_document-instance_method" title="#on_response_document (instance method)">- (Object) <strong>on_response_document</strong>(doc) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#parse_job_list-instance_method" title="#parse_job_list (instance method)">- (Hash) <strong>parse_job_list</strong>(node) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Parse the jobs into a hash for reading.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#parse_submit_job-instance_method" title="#parse_submit_job (instance method)">- (Hash) <strong>parse_submit_job</strong>(node) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Parse a job response.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#production_options-instance_method" title="#production_options (instance method)">- (Object) <strong>production_options</strong>(node, type, path) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Build the production options.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#serial_info-instance_method" title="#serial_info (instance method)">- (Hash) <strong>serial_info</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Build a hash of serial information.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#submit_blueray-instance_method" title="#submit_blueray (instance method)">- (Hash) <strong>submit_blueray</strong>(path) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Submit a BlueRay for burning.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#submit_dvd-instance_method" title="#submit_dvd (instance method)">- (Hash) <strong>submit_dvd</strong>(path) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Submit a DVD for burning.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="blueray_imaging_options-instance_method">
+  
+    - (<tt>Object</tt>) <strong>blueray_imaging_options</strong>(node, path) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Build the imaging options for blueray.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The node to add this data to.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Path</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Path for the image.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+223
+224
+225</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/rimage_service.rb', line 223</span>
+
+<span class='def def kw'>def</span> <span class='blueray_imaging_options identifier id'>blueray_imaging_options</span><span class='lparen token'>(</span><span class='node identifier id'>node</span><span class='comma token'>,</span> <span class='path identifier id'>path</span><span class='rparen token'>)</span>
+  <span class='imaging_options identifier id'>imaging_options</span><span class='lparen token'>(</span><span class='node identifier id'>node</span><span class='comma token'>,</span> <span class='path identifier id'>path</span><span class='comma token'>,</span> <span class='string val'>&quot;BdDl&quot;</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="build_blueray-instance_method">
+  
+    - (<tt>Object</tt>) <strong>build_blueray</strong>(node, path, priority = &quot;Normal&quot;) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Build a blueray options for submitting to the RImage server.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The node to add this data too
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Path</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Path to the directory to burn.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Priority (Normal, Low, High)
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+172
+173
+174</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/rimage_service.rb', line 172</span>
+
+<span class='def def kw'>def</span> <span class='build_blueray identifier id'>build_blueray</span><span class='lparen token'>(</span><span class='node identifier id'>node</span><span class='comma token'>,</span> <span class='path identifier id'>path</span><span class='comma token'>,</span> <span class='priority identifier id'>priority</span><span class='assign token'>=</span><span class='string val'>&quot;Normal&quot;</span><span class='rparen token'>)</span>
+  <span class='build_job identifier id'>build_job</span><span class='lparen token'>(</span><span class='node identifier id'>node</span><span class='comma token'>,</span> <span class='path identifier id'>path</span><span class='comma token'>,</span> <span class='priority identifier id'>priority</span><span class='comma token'>,</span> <span class='string val'>&quot;BdDl&quot;</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="build_dvd-instance_method">
+  
+    - (<tt>Object</tt>) <strong>build_dvd</strong>(node, path, priority = &quot;Normal&quot;) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Build a dvd with dvd options for submitting to the RImage server.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The node to add this data too
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Path</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Path to the directory to burn.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Priority (Normal, Low, High)
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+163
+164
+165</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/rimage_service.rb', line 163</span>
+
+<span class='def def kw'>def</span> <span class='build_dvd identifier id'>build_dvd</span><span class='lparen token'>(</span><span class='node identifier id'>node</span><span class='comma token'>,</span> <span class='path identifier id'>path</span><span class='comma token'>,</span> <span class='priority identifier id'>priority</span><span class='assign token'>=</span><span class='string val'>&quot;Normal&quot;</span><span class='rparen token'>)</span>
+  <span class='build_job identifier id'>build_job</span><span class='lparen token'>(</span><span class='node identifier id'>node</span><span class='comma token'>,</span> <span class='path identifier id'>path</span><span class='comma token'>,</span> <span class='priority identifier id'>priority</span><span class='comma token'>,</span> <span class='string val'>&quot;Dvdr&quot;</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="build_job-instance_method">
+  
+    - (<tt>Object</tt>) <strong>build_job</strong>(node, path, priority = &quot;Normal&quot;, type = &quot;BdDl&quot;) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Build the job parameters we neeed to the RImage server.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The node to add this data too
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Path</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Path to the directory to burn.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Priority (Normal, Low, High)
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The type of build (BdDl / Dvdr / Cdr)
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/rimage_service.rb', line 182</span>
+
+<span class='def def kw'>def</span> <span class='build_job identifier id'>build_job</span><span class='lparen token'>(</span><span class='node identifier id'>node</span><span class='comma token'>,</span> <span class='path identifier id'>path</span><span class='comma token'>,</span> <span class='priority identifier id'>priority</span><span class='assign token'>=</span><span class='string val'>&quot;Normal&quot;</span><span class='comma token'>,</span> <span class='type identifier id'>type</span><span class='assign token'>=</span><span class='string val'>&quot;BdDl&quot;</span><span class='rparen token'>)</span>
+  <span class='node identifier id'>node</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:Job&quot;</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='job identifier id'>job</span><span class='bitor op'>|</span>
+    <span class='case case kw'>case</span> <span class='type identifier id'>type</span>
+    <span class='when when kw'>when</span> <span class='string val'>&quot;BdDl&quot;</span>
+      <span class='blueray_imaging_options identifier id'>blueray_imaging_options</span><span class='lparen token'>(</span><span class='job identifier id'>job</span><span class='comma token'>,</span> <span class='path identifier id'>path</span><span class='rparen token'>)</span>
+    <span class='when when kw'>when</span> <span class='string val'>&quot;Dvdr&quot;</span>
+      <span class='dvd_imaging_options identifier id'>dvd_imaging_options</span><span class='lparen token'>(</span><span class='job identifier id'>job</span><span class='comma token'>,</span> <span class='path identifier id'>path</span><span class='rparen token'>)</span>
+    <span class='end end kw'>end</span>
+    <span class='job identifier id'>job</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:JobId&quot;</span><span class='comma token'>,</span> <span class='create_job_id identifier id'>create_job_id</span><span class='lparen token'>(</span><span class='path identifier id'>path</span><span class='rparen token'>)</span>
+    <span class='job identifier id'>job</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:Priority&quot;</span><span class='comma token'>,</span> <span class='priority identifier id'>priority</span>
+    <span class='production_options identifier id'>production_options</span><span class='lparen token'>(</span><span class='job identifier id'>job</span><span class='comma token'>,</span> <span class='type identifier id'>type</span><span class='comma token'>,</span> <span class='path identifier id'>path</span><span class='rparen token'>)</span>
+    <span class='job identifier id'>job</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:Type&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;ImageAndRecord&quot;</span>
+  <span class='end end kw'>end</span>
+  <span class='node identifier id'>node</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="build_label-instance_method">
+  
+    - (<tt>Object</tt>) <strong>build_label</strong>(node) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Build the label information for the request.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The node to add this data to.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+289
+290
+291
+292
+293
+294</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/rimage_service.rb', line 289</span>
+
+<span class='def def kw'>def</span> <span class='build_label identifier id'>build_label</span><span class='lparen token'>(</span><span class='node identifier id'>node</span><span class='rparen token'>)</span>
+  <span class='node identifier id'>node</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:LabelFile&quot;</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='label identifier id'>label</span><span class='bitor op'>|</span>
+    <span class='label identifier id'>label</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:LabelFilePath&quot;</span><span class='comma token'>,</span> <span class='string val'>'\\\\rimage\Rimage\Labels\belatorbackup.btw'</span>
+    <span class='label identifier id'>label</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:LabelType&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;Btw&quot;</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="cancel_all_jobs-instance_method">
+  
+    - (<tt>Boolean</tt>, <tt>Hash</tt>) <strong>cancel_all_jobs</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Cancel all jobs, not accessible via the web.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>, <tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+True if it worked, hash of errors if it had problems.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/rimage_service.rb', line 60</span>
+
+<span class='def def kw'>def</span> <span class='cancel_all_jobs identifier id'>cancel_all_jobs</span>
+  <span class='errors identifier id'>errors</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='job_list identifier id'>job_list</span> <span class='assign token'>=</span> <span class='get_all_jobs identifier id'>get_all_jobs</span>
+  <span class='job_list identifier id'>job_list</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='job identifier id'>job</span><span class='bitor op'>|</span>
+    <span class='res identifier id'>res</span> <span class='assign token'>=</span> <span class='cancel_job identifier id'>cancel_job</span><span class='lparen token'>(</span><span class='job identifier id'>job</span><span class='lbrack token'>[</span><span class='symbol val'>:job_id</span><span class='rbrack token'>]</span><span class='comma token'>,</span> <span class='job identifier id'>job</span><span class='lbrack token'>[</span><span class='symbol val'>:caller_id</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+    <span class='if if kw'>if</span> <span class='notop op'>!</span><span class='res identifier id'>res</span><span class='lbrack token'>[</span><span class='symbol val'>:error_message</span><span class='rbrack token'>]</span><span class='dot token'>.</span><span class='nil? fid id'>nil?</span> <span class='orop op'>||</span> <span class='res identifier id'>res</span><span class='lbrack token'>[</span><span class='symbol val'>:error_code</span><span class='rbrack token'>]</span> <span class='neq op'>!=</span> <span class='string val'>&quot;0&quot;</span>
+      <span class='error identifier id'>error</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span>
+        <span class='symbol val'>:job_id</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='job identifier id'>job</span><span class='lbrack token'>[</span><span class='symbol val'>:job_id</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+        <span class='symbol val'>:error_code</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='res identifier id'>res</span><span class='lbrack token'>[</span><span class='symbol val'>:error_code</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+        <span class='symbol val'>:error_message</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='res identifier id'>res</span><span class='lbrack token'>[</span><span class='symbol val'>:error_message</span><span class='rbrack token'>]</span><span class='comma token'>,</span>
+      <span class='rbrace token'>}</span>
+      <span class='errors identifier id'>errors</span> <span class='lshft op'>&lt;&lt;</span> <span class='error identifier id'>error</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+  <span class='return return kw'>return</span> <span class='errors identifier id'>errors</span><span class='dot token'>.</span><span class='empty? fid id'>empty?</span> <span class='integer val'>? </span><span class='true true kw'>true</span> <span class='colon op'>:</span> <span class='errors identifier id'>errors</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="cancel_job-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>cancel_job</strong>(job_id, caller = &quot;Warehouse&quot;) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Cancel an existing job on the RImage server.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The job id for this request.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Result of the request.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/rimage_service.rb', line 35</span>
+
+<span class='def def kw'>def</span> <span class='cancel_job identifier id'>cancel_job</span><span class='lparen token'>(</span><span class='job_id identifier id'>job_id</span><span class='comma token'>,</span> <span class='caller identifier id'>caller</span><span class='assign token'>=</span><span class='string val'>&quot;Warehouse&quot;</span><span class='rparen token'>)</span>
+  <span class='soap_action identifier id'>soap_action</span> <span class='assign token'>=</span> <span class='string val'>&quot;http://www.rimage.com/RmJobService/IRmJobService/CancelJob&quot;</span>
+  <span class='response identifier id'>response</span> <span class='assign token'>=</span> <span class='invoke identifier id'>invoke</span><span class='lparen token'>(</span><span class='string val'>&quot;rmj:CancelJob&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:soap_action</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='soap_action identifier id'>soap_action</span><span class='rparen token'>)</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='message identifier id'>message</span><span class='bitor op'>|</span>
+    <span class='message identifier id'>message</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rmj:request&quot;</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='req identifier id'>req</span><span class='bitor op'>|</span>
+      <span class='req identifier id'>req</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:CallerId&quot;</span><span class='comma token'>,</span> <span class='caller identifier id'>caller</span>
+      <span class='req identifier id'>req</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:JobId&quot;</span><span class='comma token'>,</span> <span class='job_id identifier id'>job_id</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+  <span class='parse_submit_job identifier id'>parse_submit_job</span><span class='lparen token'>(</span><span class='response identifier id'>response</span><span class='dot token'>.</span><span class='document identifier id'>document</span><span class='dot token'>.</span><span class='xpath identifier id'>xpath</span><span class='lparen token'>(</span><span class='string val'>&quot;//s:Body&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='first identifier id'>first</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="clear_finished_jobs-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>clear_finished_jobs</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Clear all finished jobs on the server.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Result of the request.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+48
+49
+50
+51
+52
+53
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/rimage_service.rb', line 48</span>
+
+<span class='def def kw'>def</span> <span class='clear_finished_jobs identifier id'>clear_finished_jobs</span>
+  <span class='soap_action identifier id'>soap_action</span> <span class='assign token'>=</span> <span class='string val'>&quot;http://www.rimage.com/RmJobService/IRmJobService/CleanupFinishedJobs&quot;</span>
+  <span class='response identifier id'>response</span> <span class='assign token'>=</span> <span class='invoke identifier id'>invoke</span><span class='lparen token'>(</span><span class='string val'>&quot;rmj:CleanupFinishedJobs&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:soap_action</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='soap_action identifier id'>soap_action</span><span class='rparen token'>)</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='message identifier id'>message</span><span class='bitor op'>|</span>
+    <span class='message identifier id'>message</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rmj:request&quot;</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='req identifier id'>req</span><span class='bitor op'>|</span>
+      <span class='req identifier id'>req</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:CallerId&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;Warehouse&quot;</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+  <span class='parse_submit_job identifier id'>parse_submit_job</span><span class='lparen token'>(</span><span class='response identifier id'>response</span><span class='dot token'>.</span><span class='document identifier id'>document</span><span class='dot token'>.</span><span class='xpath identifier id'>xpath</span><span class='lparen token'>(</span><span class='string val'>&quot;//s:Body&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='first identifier id'>first</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="create_job_id-instance_method">
+  
+    - (<tt>Object</tt>) <strong>create_job_id</strong>(path) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Create a job id based on the path, and the # of items we have in the db. So
+the last number also shows how many times this item was burned.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+201
+202
+203
+204
+205
+206</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/rimage_service.rb', line 201</span>
+
+<span class='def def kw'>def</span> <span class='create_job_id identifier id'>create_job_id</span><span class='lparen token'>(</span><span class='path identifier id'>path</span><span class='rparen token'>)</span>
+  <span class='folder identifier id'>folder</span> <span class='assign token'>=</span> <span class='path identifier id'>path</span><span class='dot token'>.</span><span class='split identifier id'>split</span><span class='lparen token'>(</span><span class='string val'>&quot;\\&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='last identifier id'>last</span>
+  <span class='folder identifier id'>folder</span><span class='dot token'>.</span><span class='gsub! fid id'>gsub!</span><span class='lparen token'>(</span><span class='string val'>&quot;_&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;-&quot;</span><span class='rparen token'>)</span>
+  <span class='burn_num identifier id'>burn_num</span> <span class='assign token'>=</span> <span class='Burn constant id'>Burn</span><span class='dot token'>.</span><span class='count identifier id'>count</span><span class='lparen token'>(</span><span class='symbol val'>:conditions</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>&quot;job_id = ?&quot;</span><span class='comma token'>,</span> <span class='folder identifier id'>folder</span><span class='rbrack token'>]</span><span class='rparen token'>)</span>
+  <span class='job_id identifier id'>job_id</span> <span class='assign token'>=</span> <span class='dstring node'>&quot;#{folder}-#{burn_num + 1}&quot;</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="dvd_imaging_options-instance_method">
+  
+    - (<tt>Object</tt>) <strong>dvd_imaging_options</strong>(node, path) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Build the imaging options for dvd.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The node to add this data to.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Path</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Path for the image.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+216
+217
+218</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/rimage_service.rb', line 216</span>
+
+<span class='def def kw'>def</span> <span class='dvd_imaging_options identifier id'>dvd_imaging_options</span><span class='lparen token'>(</span><span class='node identifier id'>node</span><span class='comma token'>,</span> <span class='path identifier id'>path</span><span class='rparen token'>)</span>
+  <span class='imaging_options identifier id'>imaging_options</span><span class='lparen token'>(</span><span class='node identifier id'>node</span><span class='comma token'>,</span> <span class='path identifier id'>path</span><span class='comma token'>,</span> <span class='string val'>&quot;Dvdr&quot;</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_all_jobs-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>get_all_jobs</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Get a list of all the current jobs on the server.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Result of all the jobs and their status.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+109
+110
+111
+112
+113
+114
+115
+116
+117</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/rimage_service.rb', line 109</span>
+
+<span class='def def kw'>def</span> <span class='get_all_jobs identifier id'>get_all_jobs</span> 
+  <span class='soap_action identifier id'>soap_action</span> <span class='assign token'>=</span> <span class='string val'>&quot;http://www.rimage.com/RmJobService/IRmJobService/GetJobStatuses&quot;</span>
+  <span class='response identifier id'>response</span> <span class='assign token'>=</span> <span class='invoke identifier id'>invoke</span><span class='lparen token'>(</span><span class='string val'>&quot;rmj:GetJobStatuses&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:soap_action</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='soap_action identifier id'>soap_action</span><span class='rparen token'>)</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='message identifier id'>message</span><span class='bitor op'>|</span>
+    <span class='message identifier id'>message</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rmj:request&quot;</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='req identifier id'>req</span><span class='bitor op'>|</span>
+      <span class='req identifier id'>req</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:CallerId&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;Warehouse&quot;</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+  <span class='parse_job_list identifier id'>parse_job_list</span><span class='lparen token'>(</span><span class='response identifier id'>response</span><span class='dot token'>.</span><span class='document identifier id'>document</span><span class='dot token'>.</span><span class='xpath identifier id'>xpath</span><span class='lparen token'>(</span><span class='string val'>&quot;//s:Body&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='first identifier id'>first</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="imaging_options-instance_method">
+  
+    - (<tt>Object</tt>) <strong>imaging_options</strong>(node, path, image_type) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Build the imaging options.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The node to add this data to.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Path</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Path for the image.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The type of image (Dvdr, BdDl)
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/rimage_service.rb', line 231</span>
+
+<span class='def def kw'>def</span> <span class='imaging_options identifier id'>imaging_options</span><span class='lparen token'>(</span><span class='node identifier id'>node</span><span class='comma token'>,</span> <span class='path identifier id'>path</span><span class='comma token'>,</span> <span class='image_type identifier id'>image_type</span><span class='rparen token'>)</span>
+  <span class='destination_folder identifier id'>destination_folder</span> <span class='assign token'>=</span> <span class='path identifier id'>path</span><span class='dot token'>.</span><span class='split identifier id'>split</span><span class='lparen token'>(</span><span class='string val'>&quot;\\&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='last identifier id'>last</span>
+  <span class='image_path identifier id'>image_path</span> <span class='assign token'>=</span> <span class='string val'>'\\\\192.168.222.50\images\%s'</span> <span class='mod op'>%</span> <span class='destination_folder identifier id'>destination_folder</span>
+  <span class='node identifier id'>node</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:ImagingOptions&quot;</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='io identifier id'>io</span><span class='bitor op'>|</span>
+    <span class='io identifier id'>io</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:AllowOverwrite&quot;</span><span class='comma token'>,</span> <span class='true true kw'>true</span>
+    <span class='io identifier id'>io</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:AllowSpanning&quot;</span><span class='comma token'>,</span> <span class='true true kw'>true</span>
+    <span class='io identifier id'>io</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:ImageFile&quot;</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='image identifier id'>image</span><span class='bitor op'>|</span>
+      <span class='image identifier id'>image</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:ImageFilePath&quot;</span><span class='comma token'>,</span> <span class='image_path identifier id'>image_path</span>
+      <span class='image identifier id'>image</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:SizeInMinutes&quot;</span><span class='comma token'>,</span> <span class='image_type identifier id'>image_type</span>
+      <span class='image identifier id'>image</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:Type&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;Power&quot;</span> <span class='if if_mod kw'>if</span> <span class='image_type identifier id'>image_type</span> <span class='eq op'>==</span> <span class='string val'>&quot;Dvdr&quot;</span> <span class='comment val'># skips imaging goes right to burning. Remove to create image</span>
+    <span class='end end kw'>end</span>
+    <span class='io identifier id'>io</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:ParentFolders&quot;</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='folders identifier id'>folders</span><span class='bitor op'>|</span>
+      <span class='folders identifier id'>folders</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:ParentFolder&quot;</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='folder identifier id'>folder</span><span class='bitor op'>|</span>
+        <span class='folder identifier id'>folder</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:ParentFolderPath&quot;</span><span class='comma token'>,</span> <span class='path identifier id'>path</span>
+      <span class='end end kw'>end</span>
+    <span class='end end kw'>end</span>
+    <span class='io identifier id'>io</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:Level&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;Level2&quot;</span> <span class='if if_mod kw'>if</span> <span class='image_type identifier id'>image_type</span> <span class='eq op'>==</span> <span class='string val'>&quot;Dvdr&quot;</span>
+    <span class='io identifier id'>io</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:UdfOptions&quot;</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='udf identifier id'>udf</span><span class='bitor op'>|</span>
+      <span class='udf identifier id'>udf</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:Version&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;Ver150&quot;</span>
+    <span class='end end kw'>end</span>
+    <span class='io identifier id'>io</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;VolumeName&quot;</span><span class='comma token'>,</span> <span class='destination_folder identifier id'>destination_folder</span>
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="job_status-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>job_status</strong>(job_id) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Get the status of an existing job from the RImage burner.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The job id for this request.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Result of the request.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/rimage_service.rb', line 21</span>
+
+<span class='def def kw'>def</span> <span class='job_status identifier id'>job_status</span><span class='lparen token'>(</span><span class='job_id identifier id'>job_id</span><span class='rparen token'>)</span>
+  <span class='soap_action identifier id'>soap_action</span> <span class='assign token'>=</span> <span class='string val'>&quot;http://www.rimage.com/RmJobService/IRmJobService/GetJobStatus&quot;</span>
+  <span class='response identifier id'>response</span> <span class='assign token'>=</span> <span class='invoke identifier id'>invoke</span><span class='lparen token'>(</span><span class='string val'>&quot;rmj:GetJobStatus&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:soap_action</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='soap_action identifier id'>soap_action</span><span class='rparen token'>)</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='message identifier id'>message</span><span class='bitor op'>|</span>
+    <span class='message identifier id'>message</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rmj:request&quot;</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='req identifier id'>req</span><span class='bitor op'>|</span>
+      <span class='req identifier id'>req</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:CallerId&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;Warehouse&quot;</span>
+      <span class='req identifier id'>req</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:JobId&quot;</span><span class='comma token'>,</span> <span class='job_id identifier id'>job_id</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+  <span class='parse_submit_job identifier id'>parse_submit_job</span><span class='lparen token'>(</span><span class='response identifier id'>response</span><span class='dot token'>.</span><span class='document identifier id'>document</span><span class='dot token'>.</span><span class='xpath identifier id'>xpath</span><span class='lparen token'>(</span><span class='string val'>&quot;//s:Body&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='first identifier id'>first</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="on_response_document-instance_method">
+  
+    - (<tt>Object</tt>) <strong>on_response_document</strong>(doc) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15
+16</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/rimage_service.rb', line 13</span>
+
+<span class='def def kw'>def</span> <span class='on_response_document identifier id'>on_response_document</span><span class='lparen token'>(</span><span class='doc identifier id'>doc</span><span class='rparen token'>)</span>
+  <span class='doc identifier id'>doc</span><span class='dot token'>.</span><span class='add_namespace identifier id'>add_namespace</span> <span class='string val'>&quot;s&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;</span>
+  <span class='doc identifier id'>doc</span><span class='dot token'>.</span><span class='add_namespace identifier id'>add_namespace</span> <span class='string val'>&quot;a&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;http://schemas.datacontract.org/2004/07/Rimage.Web.Service&quot;</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="parse_job_list-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>parse_job_list</strong>(node) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Parse the jobs into a hash for reading.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Parent node to start searching.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Result of the request.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/rimage_service.rb', line 122</span>
+
+<span class='def def kw'>def</span> <span class='parse_job_list identifier id'>parse_job_list</span><span class='lparen token'>(</span><span class='node identifier id'>node</span><span class='rparen token'>)</span>
+  <span class='list identifier id'>list</span> <span class='assign token'>=</span> <span class='lbrack token'>[</span><span class='rbrack token'>]</span>
+  <span class='lparen token'>(</span><span class='node identifier id'>node</span><span class='div op'>/</span><span class='string val'>&quot;//a:JobStatus&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='each identifier id'>each</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='doc identifier id'>doc</span><span class='bitor op'>|</span>
+    <span class='job identifier id'>job</span> <span class='assign token'>=</span> <span class='lbrace token'>{</span>
+      <span class='symbol val'>:caller_id</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lparen token'>(</span><span class='doc identifier id'>doc</span><span class='div op'>/</span><span class='string val'>&quot;.//a:CallerId&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='comma token'>,</span>
+      <span class='symbol val'>:copies_completed</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lparen token'>(</span><span class='doc identifier id'>doc</span><span class='div op'>/</span><span class='string val'>&quot;.//a:CopiesCompleted&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='comma token'>,</span>
+      <span class='symbol val'>:copies_requested</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lparen token'>(</span><span class='doc identifier id'>doc</span><span class='div op'>/</span><span class='string val'>&quot;.//a:CopiesRequested&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='comma token'>,</span>
+      <span class='symbol val'>:error_code</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lparen token'>(</span><span class='doc identifier id'>doc</span><span class='div op'>/</span><span class='string val'>&quot;.//a:ErrorCode&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='comma token'>,</span>
+      <span class='symbol val'>:error_message</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lparen token'>(</span><span class='doc identifier id'>doc</span><span class='div op'>/</span><span class='string val'>&quot;.//a:ErrorMessage&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='comma token'>,</span>
+      <span class='symbol val'>:imaging_time</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lparen token'>(</span><span class='doc identifier id'>doc</span><span class='div op'>/</span><span class='string val'>&quot;.//a:ImagingCompletedTime&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='comma token'>,</span>
+      <span class='symbol val'>:job_id</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lparen token'>(</span><span class='doc identifier id'>doc</span><span class='div op'>/</span><span class='string val'>&quot;.//a:JobId&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='comma token'>,</span>
+      <span class='symbol val'>:percent_completed</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lparen token'>(</span><span class='doc identifier id'>doc</span><span class='div op'>/</span><span class='string val'>&quot;.//a:PercentComplete&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='comma token'>,</span>
+      <span class='symbol val'>:completed_time</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lparen token'>(</span><span class='doc identifier id'>doc</span><span class='div op'>/</span><span class='string val'>&quot;.//a:ProductionCompletedTime&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='comma token'>,</span>
+      <span class='symbol val'>:stage</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lparen token'>(</span><span class='doc identifier id'>doc</span><span class='div op'>/</span><span class='string val'>&quot;.//a:Stage&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='comma token'>,</span>
+      <span class='symbol val'>:state</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lparen token'>(</span><span class='doc identifier id'>doc</span><span class='div op'>/</span><span class='string val'>&quot;.//a:State&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='comma token'>,</span>
+    <span class='rbrace token'>}</span>
+    <span class='list identifier id'>list</span> <span class='lshft op'>&lt;&lt;</span> <span class='job identifier id'>job</span>
+  <span class='end end kw'>end</span>
+  <span class='list identifier id'>list</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="parse_submit_job-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>parse_submit_job</strong>(node) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Parse a job response
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object - Parent xml node to start searching.</tt>)</span>
+      
+      
+        <span class='name'>Object</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><ul>
+<li>Parent xml node to start searching.
+
+</li>
+</ul>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Result of the request.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/rimage_service.rb', line 147</span>
+
+<span class='def def kw'>def</span> <span class='parse_submit_job identifier id'>parse_submit_job</span><span class='lparen token'>(</span><span class='node identifier id'>node</span><span class='rparen token'>)</span>
+  <span class='lbrace token'>{</span>
+    <span class='symbol val'>:job_id</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lparen token'>(</span><span class='node identifier id'>node</span><span class='div op'>/</span><span class='string val'>&quot;//a:JobId&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='comma token'>,</span>
+    <span class='symbol val'>:error_code</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lparen token'>(</span><span class='node identifier id'>node</span><span class='div op'>/</span><span class='string val'>&quot;//a:ErrorCode&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='comma token'>,</span>
+    <span class='symbol val'>:error_message</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lparen token'>(</span><span class='node identifier id'>node</span><span class='div op'>/</span><span class='string val'>&quot;//a:ErrorMessage&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='comma token'>,</span>
+    <span class='symbol val'>:copies_requested</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lparen token'>(</span><span class='node identifier id'>node</span><span class='div op'>/</span><span class='string val'>&quot;//a:CopiesRequested&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='comma token'>,</span>
+    <span class='symbol val'>:stage</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lparen token'>(</span><span class='node identifier id'>node</span><span class='div op'>/</span><span class='string val'>&quot;//a:Stage&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='comma token'>,</span>
+    <span class='symbol val'>:state</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lparen token'>(</span><span class='node identifier id'>node</span><span class='div op'>/</span><span class='string val'>&quot;//a:State&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='to_s identifier id'>to_s</span><span class='comma token'>,</span>
+  <span class='rbrace token'>}</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="production_options-instance_method">
+  
+    - (<tt>Object</tt>) <strong>production_options</strong>(node, type, path) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Build the production options.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Object</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The node to add this data to.
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>Type</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The type of image (Dvdr, BdDl)
+</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+The path to the watch folder.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/rimage_service.rb', line 259</span>
+
+<span class='def def kw'>def</span> <span class='production_options identifier id'>production_options</span><span class='lparen token'>(</span><span class='node identifier id'>node</span><span class='comma token'>,</span> <span class='type identifier id'>type</span><span class='comma token'>,</span> <span class='path identifier id'>path</span><span class='rparen token'>)</span>
+  <span class='node identifier id'>node</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:ProductionOptions&quot;</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='po identifier id'>po</span><span class='bitor op'>|</span>
+    <span class='po identifier id'>po</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:Copies&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;1&quot;</span>
+    <span class='po identifier id'>po</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:FixateType&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;Sao&quot;</span>
+    <span class='build_label identifier id'>build_label</span><span class='lparen token'>(</span><span class='po identifier id'>po</span><span class='rparen token'>)</span>
+    <span class='po identifier id'>po</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:MediaType&quot;</span><span class='comma token'>,</span> <span class='type identifier id'>type</span>
+    <span class='po identifier id'>po</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:Merge&quot;</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='merge identifier id'>merge</span><span class='bitor op'>|</span>
+      <span class='merge identifier id'>merge</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:MergeData&quot;</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='mergedata identifier id'>mergedata</span><span class='bitor op'>|</span>
+        
+        <span class='mergedata identifier id'>mergedata</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:FieldNames&quot;</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='fieldnames identifier id'>fieldnames</span><span class='bitor op'>|</span>
+          <span class='fieldnames identifier id'>fieldnames</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;arr:string&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;description&quot;</span>
+          <span class='fieldnames identifier id'>fieldnames</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;arr:string&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;barcode&quot;</span>
+          <span class='fieldnames identifier id'>fieldnames</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;arr:string&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;barcodeurl&quot;</span>
+        <span class='end end kw'>end</span>
+        
+        <span class='mergedata identifier id'>mergedata</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:FieldValues&quot;</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='fieldvalues identifier id'>fieldvalues</span><span class='bitor op'>|</span>
+          <span class='fieldvalues identifier id'>fieldvalues</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;arr:ArrayOfstring&quot;</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='arrstring identifier id'>arrstring</span><span class='bitor op'>|</span>
+            <span class='arrstring identifier id'>arrstring</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;arr:string&quot;</span><span class='comma token'>,</span> <span class='path identifier id'>path</span><span class='dot token'>.</span><span class='split identifier id'>split</span><span class='lparen token'>(</span><span class='string val'>&quot;\\&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='last identifier id'>last</span>
+            <span class='arrstring identifier id'>arrstring</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;arr:string&quot;</span><span class='comma token'>,</span> <span class='serial_info identifier id'>serial_info</span><span class='lbrack token'>[</span><span class='symbol val'>:serial</span><span class='rbrack token'>]</span>
+            <span class='arrstring identifier id'>arrstring</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;arr:string&quot;</span><span class='comma token'>,</span> <span class='serial_info identifier id'>serial_info</span><span class='lbrack token'>[</span><span class='symbol val'>:url</span><span class='rbrack token'>]</span>
+          <span class='end end kw'>end</span>
+        <span class='end end kw'>end</span>
+        
+      <span class='end end kw'>end</span>
+    <span class='end end kw'>end</span>  
+  <span class='end end kw'>end</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="serial_info-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>serial_info</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Build a hash of serial information.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><ul>
+<li>Serial information.
+
+</li>
+</ul>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+298
+299
+300
+301
+302</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/rimage_service.rb', line 298</span>
+
+<span class='def def kw'>def</span> <span class='serial_info identifier id'>serial_info</span>
+  <span class='comment val'># find all the content marked as completed and use that as a serial count</span>
+  <span class='serial identifier id'>serial</span> <span class='assign token'>=</span> <span class='Content constant id'>Content</span><span class='dot token'>.</span><span class='count identifier id'>count</span><span class='lparen token'>(</span><span class='symbol val'>:conditions</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='lbrack token'>[</span><span class='string val'>&quot;state = ?&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:completed</span><span class='rbrack token'>]</span><span class='rparen token'>)</span> <span class='plus op'>+</span> <span class='integer val'>1</span>
+  <span class='lbrace token'>{</span><span class='symbol val'>:url</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='dstring node'>&quot;http://warehouse/#{serial}&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:serial</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='serial identifier id'>serial</span><span class='rbrace token'>}</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="submit_blueray-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>submit_blueray</strong>(path) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Submit a BlueRay for burning.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Path to the watch folder.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Result of the request.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/rimage_service.rb', line 94</span>
+
+<span class='def def kw'>def</span> <span class='submit_blueray identifier id'>submit_blueray</span><span class='lparen token'>(</span><span class='path identifier id'>path</span><span class='rparen token'>)</span>
+  <span class='soap_action identifier id'>soap_action</span> <span class='assign token'>=</span> <span class='string val'>&quot;http://www.rimage.com/RmJobService/IRmJobService/SubmitJob&quot;</span>
+  <span class='response identifier id'>response</span> <span class='assign token'>=</span> <span class='invoke identifier id'>invoke</span><span class='lparen token'>(</span><span class='string val'>&quot;rmj:SubmitJob&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:soap_action</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='soap_action identifier id'>soap_action</span><span class='rparen token'>)</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='message identifier id'>message</span><span class='bitor op'>|</span>
+    <span class='message identifier id'>message</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rmj:request&quot;</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='req identifier id'>req</span><span class='bitor op'>|</span>
+      <span class='req identifier id'>req</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:CallerId&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;Warehouse&quot;</span>
+      <span class='build_dvd identifier id'>build_dvd</span><span class='lparen token'>(</span><span class='req identifier id'>req</span><span class='comma token'>,</span> <span class='path identifier id'>path</span><span class='rparen token'>)</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+  <span class='parse_submit_job identifier id'>parse_submit_job</span><span class='lparen token'>(</span><span class='response identifier id'>response</span><span class='dot token'>.</span><span class='document identifier id'>document</span><span class='dot token'>.</span><span class='xpath identifier id'>xpath</span><span class='lparen token'>(</span><span class='string val'>&quot;//s:Body&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='first identifier id'>first</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="submit_dvd-instance_method">
+  
+    - (<tt>Hash</tt>) <strong>submit_dvd</strong>(path) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Submit a DVD for burning.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+        <span class='name'>-</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Path to the watch folder.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Hash</tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Result of the request.
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/rimage_service.rb', line 80</span>
+
+<span class='def def kw'>def</span> <span class='submit_dvd identifier id'>submit_dvd</span><span class='lparen token'>(</span><span class='path identifier id'>path</span><span class='rparen token'>)</span>
+  <span class='soap_action identifier id'>soap_action</span> <span class='assign token'>=</span> <span class='string val'>&quot;http://www.rimage.com/RmJobService/IRmJobService/SubmitJob&quot;</span>
+  <span class='response identifier id'>response</span> <span class='assign token'>=</span> <span class='invoke identifier id'>invoke</span><span class='lparen token'>(</span><span class='string val'>&quot;rmj:SubmitJob&quot;</span><span class='comma token'>,</span> <span class='symbol val'>:soap_action</span> <span class='assign token'>=</span><span class='gt op'>&gt;</span> <span class='soap_action identifier id'>soap_action</span><span class='rparen token'>)</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='message identifier id'>message</span><span class='bitor op'>|</span>
+    <span class='message identifier id'>message</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rmj:request&quot;</span> <span class='do do kw'>do</span> <span class='bitor op'>|</span><span class='req identifier id'>req</span><span class='bitor op'>|</span>
+      <span class='req identifier id'>req</span><span class='dot token'>.</span><span class='add identifier id'>add</span> <span class='string val'>&quot;rim:CallerId&quot;</span><span class='comma token'>,</span> <span class='string val'>&quot;Warehouse&quot;</span>
+      <span class='build_dvd identifier id'>build_dvd</span><span class='lparen token'>(</span><span class='req identifier id'>req</span><span class='comma token'>,</span> <span class='path identifier id'>path</span><span class='rparen token'>)</span>
+    <span class='end end kw'>end</span>
+  <span class='end end kw'>end</span>
+  <span class='parse_submit_job identifier id'>parse_submit_job</span><span class='lparen token'>(</span><span class='response identifier id'>response</span><span class='dot token'>.</span><span class='document identifier id'>document</span><span class='dot token'>.</span><span class='xpath identifier id'>xpath</span><span class='lparen token'>(</span><span class='string val'>&quot;//s:Body&quot;</span><span class='rparen token'>)</span><span class='dot token'>.</span><span class='first identifier id'>first</span><span class='rparen token'>)</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Tue Oct 19 23:20:09 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.1 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

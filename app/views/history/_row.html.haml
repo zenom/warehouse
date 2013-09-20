@@ -1,0 +1,13 @@
+%tr{:id => "content_#{content.id}"}
+  %td.folder= content.destination_folder
+  %td.title= content.cadre_title
+  %td.content= content.content_type
+  %td.media= content.media
+  %td.burns= "#{content.burns.completed.count}/#{content.burns.count}"
+  %td.functions
+    = link_to "Details", history_details_path(content) if content.current_state == :complete || content.current_state == :pending
+    = " | " if content.current_state == :complete || content.current_state == :pending
+    = link_to("Archive", history_archive_url(content), :remote => true, :confirm => "Are you sure you wish to archive this burn?") if content.current_state == :complete
+    = " | " if content.current_state == :complete
+    = link_to "#{'Re-' if content.current_state == :complete}Process", history_process_url(content), :confirm => "Are you sure you wish to process this video?", :remote => true if content.current_state == :failed || content.current_state == :complete || content.current_state == :pending
+    = link_to "Cancel" if !content.current_state == :started

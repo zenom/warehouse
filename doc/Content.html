@@ -1,0 +1,516 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: Content</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (C)</a> &raquo; 
+    
+    
+    <span class="title">Content</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Content
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">ActiveRecord::Base</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">ActiveRecord::Base</li>
+          
+            <li class="next">Content</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2">ActiveRecord::Transitions</dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">app/models/content.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="per_page-classvariable" class="">@@per_page =
+          
+        </dt>
+        <dd><pre class="code"><span class='integer val'>10</span>
+</pre></dd>
+      
+    </dl>
+  
+
+
+  
+  
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_processing%3F-class_method" title="has_processing? (class method)">+ (Boolean) <strong>has_processing?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+do we have items processing already?.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#blueray%3F-instance_method" title="#blueray? (instance method)">- (Boolean) <strong>blueray?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Is this a blue ray disc.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#dvd%3F-instance_method" title="#dvd? (instance method)">- (Boolean) <strong>dvd?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Is this a dvd disc.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#last_burn-instance_method" title="#last_burn (instance method)">- (Object) <strong>last_burn</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Last burn for this set.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#process_video-instance_method" title="#process_video (instance method)">- (Object) <strong>process_video</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+This is used because it needs to be able to handle failures.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="has_processing?-class_method">
+  
+    + (<tt>Boolean</tt>) <strong>has_processing?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+do we have items processing already?
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+56
+57
+58</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/content.rb', line 56</span>
+
+<span class='def def kw'>def</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='has_processing? fid id'>has_processing?</span>
+  <span class='Content constant id'>Content</span><span class='dot token'>.</span><span class='processing identifier id'>processing</span><span class='dot token'>.</span><span class='count identifier id'>count</span> <span class='gt op'>&gt;</span> <span class='integer val'>0</span> <span class='question op'>?</span> <span class='true true kw'>true</span> <span class='colon op'>:</span> <span class='false false kw'>false</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="blueray?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>blueray?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Is this a blue ray disc.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/content.rb', line 71</span>
+
+<span class='def def kw'>def</span> <span class='blueray? fid id'>blueray?</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='media identifier id'>media</span> <span class='eq op'>==</span> <span class='string val'>&quot;Blue Ray&quot;</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="dvd?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>dvd?</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Is this a dvd disc.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/content.rb', line 66</span>
+
+<span class='def def kw'>def</span> <span class='dvd? fid id'>dvd?</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='media identifier id'>media</span> <span class='eq op'>==</span> <span class='string val'>&quot;DVD&quot;</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="last_burn-instance_method">
+  
+    - (<tt>Object</tt>) <strong>last_burn</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Last burn for this set.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+61
+62
+63</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/content.rb', line 61</span>
+
+<span class='def def kw'>def</span> <span class='last_burn identifier id'>last_burn</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='burns identifier id'>burns</span><span class='dot token'>.</span><span class='last identifier id'>last</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="process_video-instance_method">
+  
+    - (<tt>Object</tt>) <strong>process_video</strong> 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+This is used because it needs to be able to handle failures. otherwise it
+was always setting to processing. This way we can faiures in the content
+itself.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/models/content.rb', line 78</span>
+
+<span class='def def kw'>def</span> <span class='process_video identifier id'>process_video</span>
+  <span class='burn_job identifier id'>burn_job</span> <span class='assign token'>=</span> <span class='self self kw'>self</span><span class='dot token'>.</span><span class='burns identifier id'>burns</span><span class='dot token'>.</span><span class='create identifier id'>create</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='process! fid id'>process!</span> <span class='unless unless_mod kw'>unless</span> <span class='burn_job identifier id'>burn_job</span><span class='dot token'>.</span><span class='failed? fid id'>failed?</span>
+  <span class='self self kw'>self</span><span class='dot token'>.</span><span class='fail! fid id'>fail!</span> <span class='if if_mod kw'>if</span> <span class='burn_job identifier id'>burn_job</span><span class='dot token'>.</span><span class='failed? fid id'>failed?</span>
+<span class='end end kw'>end</span>
+</pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Tue Oct 19 23:20:10 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.1 (ruby-1.8.7).
+</div>
+
+  </body>
+</html>

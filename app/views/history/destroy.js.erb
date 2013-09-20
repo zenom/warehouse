@@ -1,0 +1,4 @@
+$("#content_<%=@content.id%>").fadeTo(400, 0, function() {
+  $(this).remove();
+  $('.block table tr:odd').css('background-color', '#fbfbfb');
+});

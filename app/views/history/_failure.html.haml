@@ -1,0 +1,9 @@
+%tr{:id => "content_#{content.id}"}
+  %td.serial= content.id
+  %td.jobid= content.last_burn.nil? ? "Unknown" : content.burns.last.job_id
+  %td.folder= content.destination_folder
+  %td.failure_message= content.last_burn.nil? ? "Unknown Error" : content.last_burn.message
+  %td.functions
+    = link_to "Process", history_process_url(content), :confirm => "Are you sure you wish to process this video?", :remote => true
+    = " | "
+    = link_to "Clear", history_clear_failed_url(content), :confirm => "Are you sure you wish to clear this error?", :remote => true

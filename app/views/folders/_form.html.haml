@@ -1,0 +1,24 @@
+#performer.block
+  .block_head
+    .bheadl
+    .bheadr
+    %h2
+      Folder Information
+  .block_content
+    = simple_form_for folder do |f|
+      -if folder.errors.any?
+        #errorExplanation
+          %h2= "#{pluralize(folder.errors.count, "error")} prohibited this note from being saved:"
+          %ul
+            - folder.errors.full_messages.each do |msg|
+              %li= msg
+      %div.small.left
+        = f.input :folder, :input_html => {:class => :text}
+        = f.input :title, :input_html => {:class => :text}
+        = f.input :media, :collection => Settings::MEDIA_TYPES, :input_html => {:class => :styled, :tabindex => '28'}, :prompt => "Choose Media"
+        = f.input :content_type, :collection => Settings::CONTENT_TYPES, :input_html => {:class => :styled, :tabindex => '28'}, :prompt => "Choose Content"
+        = f.button :submit, :class => "submit mid", :style => "align: center;"
+        %br/
+        %br/
+  .bendl
+  .bendr

@@ -1,0 +1,24 @@
+%div#cancels
+  .block
+    .block_head
+      .bheadl
+      .bheadr
+      %h2{:style => "color: #fe7380;"} Cancelled Jobs
+      %span.ajax-loading
+
+    / .block_head ends
+    .block_content
+      %form{:action => "", :method => "post"}
+        %table{:cellpadding => "0", :cellspacing => "0", :width => "100%", :id => "users"}
+          %tr
+            %th Folder
+            %th Title
+            %th Content
+            %th Media
+            %th Burns
+            %td &nbsp;
+          - @cancels.each do |content|
+            = render :partial => 'history/cancel', :locals => {:content => content }
+
+    .bendl
+    .bendr

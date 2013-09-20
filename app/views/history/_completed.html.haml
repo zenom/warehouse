@@ -1,0 +1,31 @@
+%div#completed
+  .block
+    .block_head
+      .bheadl
+      .bheadr
+      %h2{:style => "color: green;"} Completed
+      %span.ajax-loading
+      %ul
+        %li
+          %a{:href => "#"} Search: &nbsp;
+          %form{:method => "get", :id => "search_completed"}
+            %input.text{:type => "text", :name => "search"}/
+    / .block_head ends
+    .block_content
+      %form{:action => "/complete/search", :method => "post"}
+        %table{:cellpadding => "0", :cellspacing => "0", :width => "100%", :id => "users"}
+          %tr
+            %th Serial
+            %th Folder
+            %th Title
+            %th Content
+            %th Media
+            %td &nbsp;
+          - @completed.each do |content|
+            = render :partial => 'history/completed_row', :locals => {:content => content }
+    
+      = will_paginate @completed, :class  => :completed, :params => {:controller => :history, :action => :load_completed}
+    / .block_content ends
+    
+    .bendl
+    .bendr

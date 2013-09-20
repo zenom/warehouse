@@ -1,0 +1,85 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: http://rimage:55555/RmJobService.svc
+    body: |-
+      <?xml version='1.0' ?>
+      <env:Envelope xmlns:rim="http://schemas.datacontract.org/2004/07/Rimage.Web.Service" xmlns:rmj="http://www.rimage.com/RmJobService" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+        <env:Header />
+        <env:Body>
+          <rmj:SubmitJob>
+            <rmj:request>
+              <rim:CallerId>Warehouse</rim:CallerId>
+              <rim:Job>
+                <rim:ImagingOptions>
+                  <rim:AllowOverwrite>true</rim:AllowOverwrite>
+                  <rim:AllowSpanning>true</rim:AllowSpanning>
+                  <rim:ImageFile>
+                    <rim:ImageFilePath>\192.168.222.50\imagesVideo_Cayden_Richard_20100805114425</rim:ImageFilePath>
+                    <rim:SizeInMinutes>Dvdr</rim:SizeInMinutes>
+                  </rim:ImageFile>
+                  <rim:ParentFolders>
+                    <rim:ParentFolder>
+                      <rim:ParentFolderPath>\\192.168.222.50\main-content-backup\Video\Video_Cayden_Richard_20100805114425</rim:ParentFolderPath>
+                    </rim:ParentFolder>
+                  </rim:ParentFolders>
+                  <rim:Level>Level2</rim:Level>
+                  <rim:UdfOptions>
+                    <rim:Version>Ver150</rim:Version>
+                  </rim:UdfOptions>
+                  <VolumeName>Video_Cayden_Richard_20100805114425</VolumeName>
+                </rim:ImagingOptions>
+                <rim:JobId>Video-Cayden-Richard-20100805114425-2</rim:JobId>
+                <rim:Priority>Normal</rim:Priority>
+                <rim:ProductionOptions>
+                  <rim:Copies>1</rim:Copies>
+                  <rim:FixateType>Sao</rim:FixateType>
+                  <rim:LabelFile>
+                    <rim:LabelFilePath>\\rimage\Rimage\Labels\belatorbackup1.btw</rim:LabelFilePath>
+                    <rim:LabelType>Btw</rim:LabelType>
+                  </rim:LabelFile>
+                  <rim:MediaType>Dvdr</rim:MediaType>
+                  <rim:Merge>
+                    <rim:MergeData>
+                      <rim:FieldNames>
+                        <arr:string>description</arr:string>
+                        <arr:string>barcode</arr:string>
+                        <arr:string>barcodeurl</arr:string>
+                      </rim:FieldNames>
+                      <rim:FieldValues>
+                        <arr:ArrayOfstring>
+                          <arr:string>Video_Cayden_Richard_20100805114425</arr:string>
+                          <arr:string>1</arr:string>
+                          <arr:string>http://warehouse/1</arr:string>
+                        </arr:ArrayOfstring>
+                      </rim:FieldValues>
+                    </rim:MergeData>
+                  </rim:Merge>
+                </rim:ProductionOptions>
+                <rim:Type>ImageAndRecord</rim:Type>
+              </rim:Job>
+            </rmj:request>
+          </rmj:SubmitJob>
+        </env:Body>
+      </env:Envelope>
+    headers: 
+      "soapaction: http://www.rimage.com/rmjobservice/irmjobservice/submitjob": 
+      - ""
+      "content-type: text/xml;charset=utf-8": 
+      - ""
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - text/xml; charset=utf-8
+      server: 
+      - Microsoft-HTTPAPI/1.0
+      date: 
+      - Wed, 20 Oct 2010 23:45:54 GMT
+      content-length: 
+      - "890"
+    body: <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><SubmitJobResponse xmlns="http://www.rimage.com/RmJobService"><SubmitJobResult xmlns:a="http://schemas.datacontract.org/2004/07/Rimage.Web.Service" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><a:ErrorCode>0</a:ErrorCode><a:ErrorMessage i:nil="true"/><a:JobStatus><a:CallerId>Warehouse</a:CallerId><a:CopiesCompleted>0</a:CopiesCompleted><a:CopiesRequested>1</a:CopiesRequested><a:ErrorCode>0</a:ErrorCode><a:ErrorMessage i:nil="true"/><a:ImagingCompletedTime/><a:ImagingServerId/><a:IsSpanning>true</a:IsSpanning><a:JobId>Video-Cayden-Richard-20100805114425-2</a:JobId><a:PercentComplete>0</a:PercentComplete><a:ProductionCompletedTime/><a:ProductionServerId/><a:Stage>WAITING_FOR_IMAGING</a:Stage><a:State>SubmittedForImaging</a:State></a:JobStatus></SubmitJobResult></SubmitJobResponse></s:Body></s:Envelope>
+    http_version: "1.1"

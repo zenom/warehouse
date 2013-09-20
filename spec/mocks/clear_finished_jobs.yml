@@ -1,0 +1,37 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :post
+    uri: http://rimage:55555/RmJobService.svc
+    body: |-
+      <?xml version='1.0' ?>
+      <env:Envelope xmlns:rim="http://schemas.datacontract.org/2004/07/Rimage.Web.Service" xmlns:rmj="http://www.rimage.com/RmJobService" xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns:env="http://schemas.xmlsoap.org/soap/envelope/">
+        <env:Header />
+        <env:Body>
+          <rmj:CleanupFinishedJobs>
+            <rmj:request>
+              <rim:CallerId>Warehouse</rim:CallerId>
+            </rmj:request>
+          </rmj:CleanupFinishedJobs>
+        </env:Body>
+      </env:Envelope>
+    headers: 
+      "soapaction: http://www.rimage.com/rmjobservice/irmjobservice/cleanupfinishedjobs": 
+      - ""
+      "content-type: text/xml;charset=utf-8": 
+      - ""
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - text/xml; charset=utf-8
+      server: 
+      - Microsoft-HTTPAPI/1.0
+      date: 
+      - Mon, 18 Oct 2010 22:15:34 GMT
+      content-length: 
+      - "430"
+    body: <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><CleanupFinishedJobsResponse xmlns="http://www.rimage.com/RmJobService"><CleanupFinishedJobsResult xmlns:a="http://schemas.datacontract.org/2004/07/Rimage.Web.Service" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><a:ErrorCode>0</a:ErrorCode><a:ErrorMessage i:nil="true"/></CleanupFinishedJobsResult></CleanupFinishedJobsResponse></s:Body></s:Envelope>
+    http_version: "1.1"

@@ -1,0 +1,40 @@
+%div#completed
+  .block
+    .block_head
+      .bheadl
+      .bheadr
+      %h2 Job Details # #{@content.id}
+      
+      
+    .block_content
+      %h2 Content Detail
+      %table{:cellpadding => "0", :cellspacing => "0", :width => "100%", :id => "users"}
+        %tr
+          %th Cadre Title
+          %th Directory
+          %th Content Type
+          %th Media
+        %tr
+          %td= @content.cadre_title
+          %td= @content.destination_folder
+          %td= @content.content_type
+          %td= @content.media
+          
+      %br/
+      %br/
+      %h2 Burn List
+      %table{:cellpadding => "0", :cellspacing => "0", :width => "100%", :id => "users"}
+        %tr
+          %th State
+          %th Job ID
+          %th Message
+          %th Date
+        - @content.burns.each do |burn|
+          %tr
+            %td{:class => burn.state}= burn.state
+            %td= burn.job_id
+            %td= burn.message.nil? ? "N/A" : burn.message
+            %td= burn.burn_date.strftime("%m/%d/%H %H:%M %p")
+    
+    .bendl
+    .bendr
